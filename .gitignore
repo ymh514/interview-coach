@@ -1,0 +1,11 @@
+# 敏感資料:薪資、對各公司的坦白評估 — 不進版控、不上 remote
+private/
+
+# macOS / Windows
+.DS_Store
+Thumbs.db
+
+# 大型 binary（portfolio 等放這也不追）
+*.key
+*.pptx
+*.pdf
