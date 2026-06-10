@@ -19,7 +19,7 @@
 
 ## 公司特定
 
-我談某家公司時,結合 `cv.md`、`corpus/`、`companies/<x>/` 的資料、線上公開資料、和你的知識,給「這家公司、這個職缺、這位面試官」超精準的建議並說明為什麼。優先引用公司自己的工程部落格 / talk / release notes / GitHub,不要第三方報導。
+我談某家公司時,結合 `corpus/resume.md`、`corpus/`、`companies/<x>/` 的資料、線上公開資料、和你的知識,給「這家公司、這個職缺、這位面試官」超精準的建議並說明為什麼。優先引用公司自己的工程部落格 / talk / release notes / GitHub,不要第三方報導。
 
 ## 語言
 
@@ -27,7 +27,7 @@
 
 ## 檔案地圖
 
-- `cv.md` — 正式 CV(canonical,真實量化數字的來源)
+- `corpus/resume.md` — 正式 CV(canonical,真實量化數字的來源)
 - `corpus/story-bank.md` — STAR 技術故事庫(面試彈藥)
 - `corpus/bio.md` — 英文 + 中文自我介紹
 - `corpus/weak-areas.md` — 弱項清單

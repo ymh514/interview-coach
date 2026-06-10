@@ -16,8 +16,8 @@
 ## 結構
 
 ```
-cv.md                  # canonical CV
 corpus/                # 會進 git、會 push 的非敏感語料
+  resume.md            # canonical CV
   story-bank.md        # STAR 技術故事庫 ← 面試彈藥的核心
   bio.md               # 英文 + 中文自我介紹
   weak-areas.md        # 弱項清單
