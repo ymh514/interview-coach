@@ -18,17 +18,15 @@ embedding for real-time diagnostics.
 
 **SDK Integration & Platform Engineering**
 
-- Unified Bytedance, SenseMe, and Agora SDKs into a cohesive pipeline; resolved complex thread-priority conflicts and eliminated GL context pollution
-in shared EGL environments across 3 third-party SDKs.
-- Diagnosed and fixed a production-blocking iOS DTS timestamp bug caused by nanosecond/microsecond unit mismatch, restoring stable stream
-output on all iOS devices.
+- Integrated Agora and SenseMe SDKs into a cohesive real-time pipeline; diagnosed and eliminated GL context pollution (player-side black screens) from libraries sharing a single GL context (client-side Spine, Tencent PAG) by isolating child GL contexts and enforcing GL state save/restore.
+- Diagnosed and fixed a production-blocking iOS streaming timestamp bug on high-end iPhones (duplicate timestamps violating MediaPipe's strictly-increasing microsecond timestamp contract), restoring stable stream output.
 - Developed UVC Camera support and resolved cross-platform audio capture edge cases including burst-data warnings and audio route changes.
 
 **Infrastructure & Build System**
 
 - Migrated third-party libraries (ffmpeg-kit, ExoPlayer) from Gradle to Bazel, reducing Android build time by 50% and iOS build time by 30%; achieved
 reproducible builds for iOS frameworks and Android AARs.
-- Led Android 15 16KB page-size migration across the entire native stack with zero-downtime deployment.
+- Led the Android 15 16KB page-size migration across the entire native stack (SenseME, ffmpeg-kit, openh264, libuvccamera), including rebuilding ffmpeg-kit from an archived build config after upstream dropped 16KB support.
 - Resolved Xcode 26 compatibility issues ensuring uninterrupted iOS SDK delivery.
 - Designed LangEngineSDK with dual-target support (iOS/Android), Swift module stability, and proper modulemap structure for seamless integration.
 **Interactive Physics System — "Bonk Gift** "
@@ -56,10 +54,8 @@ crop-aware rendering using model matrix transformations.
 
 - Delivered 3 carrier-distributed kids smartwatch products: Verizon GizmoWatch 2, Verizon GizmoWatch Disney Edition, and T-Mobile SyncUp Kids
 Watch — shipped to retail across US carriers.
-- Integrated Azure IoT SDK and Device Provisioning Service (DPS) on T-Mobile SyncUp, enabling 1M+ device provisioning at scale with reliable cloud
-connectivity.
-- Owned end-to-end architecture of T-Mobile SyncUp Kids Watch: designed MVVM + Repository pattern, implemented database layer, API integration,
-source control standards, and scrum processes.
+- Integrated the client-side Azure IoT SDK and Device Provisioning Service (DPS) registration flow on T-Mobile SyncUp, supporting reliable cloud connectivity for 1M+ shipped devices.
+- Built the client-side architecture of T-Mobile SyncUp Kids Watch: MVVM + Repository pattern, database layer, API integration, source control standards, and scrum processes.
 - Refactored database and Retrofit layers on GizmoWatch Disney Edition, improving code maintainability and reducing technical debt.
 - Defined team coding standards and backend API specifications, facilitating consistent delivery across a cross-functional global team.
 
